@@ -16,7 +16,8 @@ import matplotlib.pyplot as plt
 def load_data():
     """Load data from the CSV files referundum/regions/departments."""
     referendum = pd.read_csv(
-        'data/referendum.csv', sep=';')  # Department code;Department name;Town code;Town name;Registered;Abstentions;Null;Choice A;Choice B
+        'data/referendum.csv', sep=';')  # Department code;Department name;
+    # Town code;Town name;Registered;Abstentions;Null;Choice A;Choice B
     regions = pd.read_csv('data/regions.csv', sep=',')  # id,code,name,slug
     # id,region_code,code,name,slug
     departments = pd.read_csv('data/departments.csv', sep=',')
@@ -131,5 +132,3 @@ if __name__ == "__main__":
 
     plot_referendum_map(referendum_results)
     plt.show()
-
-    
